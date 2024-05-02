@@ -8,7 +8,7 @@ function redirectToLogin() {
     }
 }
 
-if (window.location.pathname === '/protected.html') {
+if (window.location.pathname === '/privateblog.html') {
     redirectToLogin();
 }
 
