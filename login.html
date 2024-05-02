@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Veldig privat</title>
+</head>
+<body class="bg-green-900">
+    <div><img src="https://icons8.com/icon/2797/home" alt=""></div>
+    <div class="flex justify-center items-center h-screen">
+        <div class="bg-green-700 text-white py-8 px-10 rounded-lg max-w-md w-full">
+            <h1 class="text-3xl font-bold text-center mb-4">Private Blog</h1>
+            <p class="text-center text-sm mb-6">This is only for Saul, so you need a password. It's important that you don't go here, because if the police finds what I'm hiding, I am so fucked.</p>
+            
+            <form id="passwordForm">
+                <div class="flex items-center mb-4">
+                    <input id="password" type="password" name="password" placeholder="Enter password" class="bg-gray-700 text-white py-2 px-3 rounded-md flex-1 mr-2">
+                    <button type="button" onclick="login()" class="bg-green-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">Login</button>
+                </div>
+            </form>
+
+            <div id="message" class="text-center"></div>
+        </div>
+    </div>
+
+    <script src="auth.js" defer></script>
+</body>
+</html>

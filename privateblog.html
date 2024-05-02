@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px;
+        }
+
+        .memory-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            overflow: hidden; 
+        }
+
+        .memory-item img {
+            width: 250px;
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 8px;
+        }
+
+        .memory-text {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .memory-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <script src="auth.js" defer></script>
+    <a href="/" class="text-blue-600 hover:underline mb-8 text-xl font-semibold p-8 fixed top-0 left-0" >Home</a>
+    <div id="unauthorizedMessage" class="container mx-auto px-4 py-8 text-center" style="display: none;">
+        <p class="text-red-600 text-xl font-semibold mb-4">You are not authorized to access this page.</p>
+        <a href="/login/index.html" class="text-blue-600 hover:underline">Please log in</a>
+    </div>
+
+    <div id="authorizedContent" class="container mx-auto px-4 py-8 text-center">
+        <p class="text-green-600 text-xl font-semibold mb-4">Velkommen til din private blogg, Saul E. Welter!</p>
+        <p class="text-gray-800">If you are not Saul and do not have permission to be here, please leave :(</p>
+        <h1 class="text-xl font-semibold mb-4 mt-8">Mine beste minner:</h1>
+        
+        <div class="memory-grid">
+            <div class="memory-item">
+                <img src="images/sheep.jpeg" alt="Memory Image">
+                <div class="memory-text">
+                    <h3 class="text-lg font-semibold">Velte sau</h3>
+                    <p class="text-gray-600">Hvorfor bare ligger den der? Hvorfor reiste den seg ikke opp etterpå? Er den dum? Jeg fortsetter å velte dem fordi de ser så dumme ut.</p>
+                </div>
+            </div>
+            
+            <div class="memory-item">
+                <img src="images/geit.png" alt="Hjemmested">
+                <div class="memory-text">
+                    <h3 class="text-lg font-semibold">Gjemme meg fra politiet</h3>
+                    <p class="text-gray-600">Jeg gjemmer meg fra politiet nå og jeg så denne geita ved <b>gjemmestedet </b>mitt! Jeg vil velte den.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        redirectToLogin();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saul E. Welter</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+     @keyframes bounceSheep {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes wobbleText {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.bounceSheep {
+    animation-name: bounceSheep;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; 
+}
+
+.wobbleText {
+    animation-name: wobbleText;
+    animation-duration: 2s;
+}
+
+    </style>
+</head>
+<body class="bg-pink-200 font-comic text-center">
+    <h1 class="text-purple-800 text-6xl underline wobbleText">Welcome to <span class="text-yellow-600">Saul E. Welter's</span> Portfolio</h1>
+    <p class="text-green-600 text-2xl mt-8 animate-pulse">I develop things sometimes</p>
+    <p class="text-red-600 text-xl mt-8">I love sheep</p>
+    <div class="mt-8 flex justify-center space-x-4">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><a href="https://github.com/saulewelter/" target="_blank">My Github</a></button>
+        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"><a href="/login.html" target="_blank">My private blog</a></button>
+    </div>
+    <img src="images/sheep.jpeg" alt="Dumb sheep" class="sheep w-48 md:w-64 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-12 bounceSheep">
+</body>
+</html>
